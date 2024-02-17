@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <style> h1 {font-size: 40px;} p {font-size: 20px;} </style>
+    </head>
+    <body>
+        <h1>TEST ONLY - DO NOT USE</h1>
+        <p>
+            Use this form to connect a thermal monitor to the public wifi on your premises.
+        </p>
+        <p>
+            Enter your WiFi SSID (network name) and password.  Then turn off mobile data and use your wifi settings to turn off auto-connection to any wifi networks that are in range.
+        </p>
+        <p>
+            Turn on the thermal monitor.  In your wifi settings, look for a new network with a name that starts with "heathack".  It may take up to a minute to appear.  Connect to it.  It only connects
+            between your device and the monitor - it will not give you internet access.
+        </p>
+        <p>
+            Then press submit.
+        </p>
+        <h1>Set WiFi Credentials: </h1>
+        <form method="post" name="frm1" action="http:192.168.4.1/inputcommsmode"> 
+            <input type="hidden" name="product" size="35" value="2024-02-08T17:12:36.277Z"> 
+            <input type='hidden' id='save2Wifi' name='save2' value='internet'>
+            <label for="SSID"> WiFi SSID</label>
+            <input type="text" style="height:38px; font-size:35px;" name="SSID">
+            <br><br>
+            <label for="Password">WiFi Password</label>
+            <input type="text" style="height:38px; font-size:35px;" name="Password">
+            <br><br>
+            <button style="height:40px; font-size:35px;" type="submit">Submit</button>
+        </form>
+        <br><br>
+        <script>const d=new Date(); document.frm1.product.value=d.toISOString(); </script>
+    </body>
+</html>
